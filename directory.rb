@@ -3,8 +3,19 @@ students = [ "Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched",
   "Terminator", "Freddy Krueger", "The Joker",
   "Joffrey Baratheon", "Norman Bates" ]
 # First print the list of students
-puts "The students of Villains Academy"
-puts "-------------"
-students.each { |student| puts student }
-# Then print the number of students
-puts "Overall, we have #{students.count} great students"
+def header
+  puts "The students of Villains Academy"
+  puts "-------------"
+end
+
+def print_students(students)
+  students.each { |student| puts student }
+end
+
+def footer(students)
+  puts "Overall, we have #{students.count} great students"
+end
+
+header
+print_students(students)
+footer(students)
